@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,10 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "firebase-admin": "^11.11.0",
+    "generate-api-key": "^1.0.2",
     "stripe": "^13.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

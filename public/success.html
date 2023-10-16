@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+    
+            body {
+                font-family: 'Poppins', sans-serif;
+                min-height: 100vh;
+                background: #8E2DE2;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        </style>
+</head>
+<body>
+    <h1>Payment Successful</h1>
+    <h3>Your API key: </h3>
+
+    <div class="apikey" id="apikey"></div>
+    <p>Don't share</p>
+    <a href="/">Home</a>
+</body>
+<script>
+    const urlParams = window.location.search;
+    const api_key = urlParams.replaceAll('?api_key=', '')
+    // Display api_key in the div that has an ID called apikey
+    const div = document.getElementById('apikey')
+    div.innerText = api_key
+</script>
+</html>
